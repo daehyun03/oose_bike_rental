@@ -1,0 +1,12 @@
+.button_container {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.button_container .rental_button {
+    background-color: #ffffff;
+    border: solid #cccccc 1px;
+    cursor: pointer;
+    font-size: 80%;
+}
