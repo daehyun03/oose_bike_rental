@@ -5,13 +5,28 @@ const SignUp = () => {
     const [id, setId] = useState('');
     const [password, setPassword] = useState('');
     const [username, setUsername] = useState('');
-    const [birth, setBirth] = useState('');
     const [phone, setPhone] = useState('');
     const [email, setEmail] = useState('');
 
     const handleRegister = (e) => {
-        e.preventDefault();
-        //TODO 등록 처리 로직
+        console.log(id);
+        const user = {
+            user : ({
+                id : id,
+                pw : password,
+                name : username,
+                phone : phone,
+                mail : email,
+            })
+        }
+
+        fetch('http://localhost:3001/insertUser', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(user),
+        });
     };
 
     return (
@@ -45,14 +60,6 @@ const SignUp = () => {
                             required
                         />
                         <input
-                            type="birth"
-                            value={birth}
-                            onChange={(e) => setBirth(e.target.value)}
-                            className="form-control form-control-birth"
-                            placeholder="Birth"
-                            required
-                        />
-                        <input
                             type="text"
                             value={phone}
                             onChange={(e) => setPhone(e.target.value)}
@@ -65,7 +72,7 @@ const SignUp = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             className="form-control form-control-email"
-                            placeholder="email"
+                            placeholder="Email"
                             required
                         />
 
