@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './useageinqury.css';
+import "./Table.css"
 
 
 function useageInqury({match}) {
