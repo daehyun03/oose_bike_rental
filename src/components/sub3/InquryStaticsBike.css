@@ -1,0 +1,13 @@
+h2 {
+    text-align: center;
+    background-color: aquamarine;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contents{
+    display: flex;
+    align-items: center;  
+    justify-content: space-around;
+}
+
