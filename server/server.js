@@ -6,6 +6,12 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const MemoryStore = require('memorystore')(session);
 
+const sub1Router = require('./sub1Control')
+const sub2Router = require('./sub2Control')
+const sub3Router = require('./sub3Control')
+const sub4Router = require('./sub4Control')
+const sub5Router = require('./sub5Control')
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
@@ -32,6 +38,7 @@ app.use(session({
         maxAge,
     },
 }));
+
 
 app.post("/insertUser", (req, res) => {
     console.log(req.body.user);
