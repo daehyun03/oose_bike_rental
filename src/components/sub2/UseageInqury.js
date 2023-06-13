@@ -3,7 +3,7 @@ import "./useageInqury.css"
 import Paging from "./Paging";
 
 
-export default function useageInqury() {
+export default function UseageInqury() {
     const dummy = [
         {No: 1, Title: "대여1"},
         {No: 2, Title: "대여2"},

@@ -2,7 +2,7 @@ import "./rentalBikeUI.css"
 import {Link} from "react-router-dom";
 
 
-function rentalBikeUI() {
+function RentalBikeUI() {
     return (
         <div className="container">
             <h2>자전거 대여 페이지</h2>
@@ -13,4 +13,4 @@ function rentalBikeUI() {
     );
 }
 
-export default rentalBikeUI;
+export default RentalBikeUI;

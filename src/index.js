@@ -13,10 +13,8 @@ import SignUp from "./components/sub1/SignUp";
 import Read from "./components/sub1/Read";
 import AddAnnouncement from "./components/sub4/AddAnnouncement";
 import AnnouncementDetail from "./components/sub4/AnnouncementDetail";
-import useageInqury from "./components/sub2/UseageInqury";
 import InquryPay from "./components/sub3/InquryPay";
 import InquryStaticsBike from "./components/sub3/InquryStaticsBike";
-import UseageInqury from "./components/sub2/UseageInqury";
 import RentalBikeUI from "./components/sub2/RentalBikeUI";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
