@@ -20,7 +20,7 @@ const SignUp = () => {
             })
         }
 
-        fetch('http://localhost:3001/insertUser', {
+        fetch('http://localhost:3001/sub1Control/insertUser', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
