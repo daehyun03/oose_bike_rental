@@ -17,6 +17,7 @@ router.post("/rentalBike", (req, res) => {
         }
     );
 });
+
 router.post("/useageInqury", (req, res) => {
     console.log(req.body);
 
