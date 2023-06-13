@@ -26,9 +26,16 @@ const connection = mysql.createConnection({
 
 app.use('/sub1Control', sub1Router);
 
+
+
+app.use('/sub5Control', sub5Router);
+
+
+
 app.get("/", (req, res) => {
    res.send("Run Server");
 });
+
 
 app.listen(port, () => {
     console.log(`Connect at http://localhost:${port}`);
