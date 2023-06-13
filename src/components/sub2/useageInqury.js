@@ -1,6 +1,5 @@
-import Table from "./Table"
+import Table from "./../sub4/Table"
 import "./useageInqury.css"
-import Paging from "./Paging";
 
 
 export default function useageInqury() {
