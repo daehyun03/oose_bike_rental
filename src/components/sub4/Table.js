@@ -1,7 +1,12 @@
 import "./Table.css"
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 function Table({data}) {
+    const navigate = useNavigate()
+    function move(info) {
+        const id = info.idx
+        navigate(`/announcement/${id}`, {state: info})
+    }
     const colums = ["No", "Title"]
     return(
         <div className="table_container">
@@ -14,10 +19,10 @@ function Table({data}) {
                     </tr>
                 </thead>
                 <tbody>
-                {data.map(({No, Title}) => (
+                {data.map((info) => (
                     <tr>
-                        <td>{No}</td>
-                        <td><Link to={`/announcement/${No}`}>{Title}</Link></td>
+                        <td>{info.idx}</td>
+                        <td><div onClick={() => move(info)}>{info.title}</div></td>
                     </tr>
                 ))}
                 </tbody>

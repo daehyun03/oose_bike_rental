@@ -1,13 +1,13 @@
-import {useParams} from "react-router-dom";
+import {useLocation} from "react-router-dom";
 import "./AnnouncementDetail.css"
 
 export default function () {
-    const params = useParams()
+    const location = useLocation()
     return(
         <div className="container">
-            <h2>{params.no}</h2>
+            <h2>{location.state.title}</h2>
             <div className="content">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus consectetur magni minima possimus quos ratione rem repudiandae sunt suscipit voluptates.
+                {location.state.contents}
             </div>
         </div>
     )

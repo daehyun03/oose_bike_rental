@@ -1,9 +1,8 @@
-import { patch } from "../sub3Control";
 import "./InquryPay.css"
-import { useEffect, useState, useCallback } from "react"
+import { useEffect, useState } from "react"
 
 async function InquryPay() {
-    const [payment, setPay] = useState("");
+    const [payment, setPay] = useState({idx: "", locate: "", state: ""});
     const [userId, setUserId] = useState(0);
 
     useEffect(() => {

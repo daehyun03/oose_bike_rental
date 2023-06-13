@@ -1,4 +1,4 @@
-const conn = require("./server");
+const conn = require("./dbConn");
 const express = require('express');
 const router = express.Router();
 
@@ -42,4 +42,4 @@ router.post("/insertRentalOffice", (req, res) => {
     );
 });
 
-
+module.exports = router;
