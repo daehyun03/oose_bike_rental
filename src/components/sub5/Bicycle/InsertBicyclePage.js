@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import {Link } from 'react-router-dom';
+import '../test.css';
+import '../Sub5.css';
 
 function InsertBicyclePage(){
     const [id, setId] = useState('');
