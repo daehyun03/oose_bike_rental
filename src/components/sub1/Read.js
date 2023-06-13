@@ -7,12 +7,12 @@ const Read = () => {
     useEffect(() => {
         const fetchUser = async () => {
             try {
-                const response = await fetch('http://localhost:3001/selectOneUser', {
+                const response = await fetch('http://localhost:3001/sub1Control/selectOneUser', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                     },
-                    body: JSON.stringify({ user: { sn: 1 } }), //TODO 회원가입한 유저의 sn을 전달 하도록 수정할 예정
+                    body: JSON.stringify({ user: { sn: 1 } }),
                 });
 
                 if (!response.ok) {
@@ -27,7 +27,8 @@ const Read = () => {
         };
 
         fetchUser();
-    }, [userData]);
+    }, []); // Removed 'userData' from the dependency array
+
 
     const handleRead = (e) => {
         e.preventDefault();
