@@ -1,0 +1,21 @@
+h2 {
+    text-align: center;
+    background-color: aquamarine;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.button_container {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    
+}
+.button_container .inqury_button {
+    text-align: center;
+    background-color: #ffffff;
+    border: solid #cccccc 1px;
+    cursor: pointer;
+    font-size: 80%;
+}
