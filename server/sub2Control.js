@@ -35,5 +35,3 @@ router.post("/useageInqury", (req, res) => {
 });
 
 module.exports = router;
-
-
