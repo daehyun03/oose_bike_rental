@@ -27,6 +27,7 @@ const SignUp = () => {
             },
             body: JSON.stringify(user),
         });
+        alert("회원가입 성공!")
     };
 
     return (
