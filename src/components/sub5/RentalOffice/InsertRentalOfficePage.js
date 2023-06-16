@@ -1,31 +1,61 @@
 import React, {useState} from 'react';
-import {Link } from 'react-router-dom';
-import '../test.css';
-import '../Sub5.css';
+import {Link, useNavigate } from 'react-router-dom';
 
-function onSubmit(id, name, manager) {
-    const rentalOffice = {
-        rentalOffice : ({
-            id : id,
-            name : name,
-            manager : manager,
-        })
-    }
-    console.log(rentalOffice);
-    fetch('http://localhost:3001/sub5Control/insertRentalOffice', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(rentalOffice),
-    });
-    alert("대여소 등록!")
-}
+import '../Sub5.css';
+import '../../../index.css';
 
 function InsertRentalOfficePage(){
     const [id, setId] = useState('');
     const [name, setName] = useState('');
     const [manager, setManager] = useState('');
+
+    const navigate = useNavigate();
+
+    function onSubmit(id, name, manager) {
+        const rentalOffice = {
+            rentalOffice : ({
+                id : id,
+                name : name,
+                manager : manager,
+            })
+        }
+    
+        let isUnique = false;
+    
+        if (id === '') {
+            alert("ID 입력은 필수 입니다.");
+        }
+        else if ((isNaN(id)) || (isNaN(manager))) {
+            alert("ID는 숫자를 입력해야 합니다.");
+        }
+        else {
+            alert("정상적으로 입력을 받았습니다.");
+            //중복 체크용
+            fetch('http://127.0.0.1:3001/sub5Control/insertRentalOffice', {
+                method: 'get'
+            }).then(res => res.json()).then(data => {
+                if(data && data.datas.length > 0)
+                {
+                    isUnique = !isUnique;
+                }
+            });
+            //실제등록
+            if(isUnique){
+                fetch('http://localhost:3001/sub5Control/insertRentalOffice', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(rentalOffice),
+                }).then((res) => res.json()).then((data) => {
+                    alert("" + data + "번 등록");
+                }).catch((error) => {
+                    console.error('오류 발생:', error);
+                });
+                navigate("/rentalOffice");
+            }
+        }
+    }
 
     return(
         <div className = "container">            
