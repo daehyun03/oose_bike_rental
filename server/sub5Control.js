@@ -5,11 +5,10 @@ const router = express.Router();
 router.post("/insertBicycle", (req, res) => {
     console.log(req.body.Bicycle);
     const id = req.body.Bicycle.id;
-    const defaultRenId = 1;
-    const defaultStatus = "사용가능";
+    const defaultRenId = "초기값";
     conn.query(
-        "INSERT INTO Bicycle (by_id, ren_id , status) VALUES (?, ?, ?)",
-        [id, defaultRenId,defaultStatus],
+        "INSERT INTO rental_bike (bicycleNum, location , date) VALUES (?, ?, ?)",
+        [id, defaultRenId, new Date()],
         (error, results, fields) => {
             if (error) {
                 console.error("Error inserting data: ", error);
@@ -29,7 +28,7 @@ router.post("/insertRentalOffice", (req, res) => {
     const defaultBicycleNum = "0";
 
     conn.query(
-        "INSERT INTO RentalOffice (ren_id, ren_name, manager, bicycle_num) VALUES (?, ?, ?, ?)",
+        "INSERT INTO rental_office (ren_id, ren_name, manager, bicycle_num) VALUES (?, ?, ?, ?)",
         [id, name, manager, defaultBicycleNum],
         (error, results, fields) => {
             if (error) {

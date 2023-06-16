@@ -25,9 +25,6 @@ function onSubmit(id) {
 function InsertBicyclePage(){
     const [id, setId] = useState('');
 
-    function idChange(e) {
-        setId(e.target.value)
-    }
     return(
         <div className = "container">
             <div className="header">
@@ -36,9 +33,9 @@ function InsertBicyclePage(){
             <div className="body">
                 <form className = "Insert_box" role = "form">
                     <span className = "text">자전거 ID:</span>
-                    <input type="text" placeholder="자전거 ID 입력" onChange={(e)=>idChange(e)}/>
+                    <input type="text" placeholder="자전거 ID 입력" onChange={(e)=>setId(e.target.value)}/>
                 </form>
-                <button className="startBtn Btn"onClick={() => onSubmit(id)}>등록</button>
+                <button className="startBtn Btn" onClick={() => onSubmit(id)}>등록</button>
                 <Link to="/bicycle">
                     <button className="backBtn Btn">뒤로</button>
                 </Link>
