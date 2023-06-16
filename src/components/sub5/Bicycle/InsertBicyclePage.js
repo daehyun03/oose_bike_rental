@@ -51,10 +51,6 @@ function InsertBicyclePage(){
             }
         }
     }
-
-    function idChange(e) {
-        setId(e.target.value)
-    }
     return(
         <div className = "container">
             <div className="header">
@@ -63,9 +59,9 @@ function InsertBicyclePage(){
             <div className="body">
                 <form className = "Insert_box" role = "form">
                     <span className = "text">자전거 ID:</span>
-                    <input type="text" placeholder="자전거 ID 입력" onChange={(e)=>idChange(e)} required/>
+                    <input type="text" placeholder="자전거 ID 입력" onChange={(e)=>setId(e.target.value)}/>
                 </form>
-                <button className="startBtn Btn"onClick={() => onSubmit(id)}>등록</button>
+                <button className="startBtn Btn" onClick={() => onSubmit(id)}>등록</button>
                 <Link to="/bicycle">
                     <button className="backBtn Btn">뒤로</button>
                 </Link>
@@ -99,4 +95,5 @@ export default InsertBicyclePage;
     .catch((error) => {
         console.error('오류 발생:', error); // 요청 또는 응답 처리 과정에서 오류가 발생한 경우, 에러를 캐치하여 처리합니다.
     });
+
     */

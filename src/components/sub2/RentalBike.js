@@ -1,7 +1,7 @@
-import "./rentalsBike.css"
+import "./rentalBike.css"
 
 
-export default function () {
+export default function RentalBike() {
     return(
         <div className="container">
 

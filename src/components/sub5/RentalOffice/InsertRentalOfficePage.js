@@ -75,7 +75,7 @@ function InsertRentalOfficePage(){
                     <span>관리자 ID : </span>
                     <input type="text" placeholder="관리자 ID 입력" onChange={(e) => setManager(e.target.value)} required />
                 </div>
-                <button className="startBtn Btn"onClick={()=>onSubmit(id,name,manager)}>등록</button>
+                <button className="startBtn Btn" onClick={()=>onSubmit(id,name,manager)}>등록</button>
                 <Link to="/rentalOffice">
                     <button className="backBtn Btn">뒤로</button>
                 </Link>
