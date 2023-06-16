@@ -15,7 +15,8 @@ import AddAnnouncement from "./components/sub4/AddAnnouncement";
 import AnnouncementDetail from "./components/sub4/AnnouncementDetail";
 import InquryPay from "./components/sub3/InquryPay";
 import InquryStaticsBike from "./components/sub3/InquryStaticsBike";
-import RentalBike from "./components/sub2/RentalBike";
+import RentalBikeUI from "./components/sub2/RentalBikeUI";
+import Main from "./components/sub1/Main";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,10 +24,11 @@ root.render(
       <BrowserRouter>
           <Header></Header>
           <Routes>
+              <Route path="/" element={<Main />} />
               <Route path="/signUp" element={<SignUp />} />
               <Route path="/userInqury" element={<Read />} />
               <Route path="/useageInqury" element={<useageInqury />} />
-              <Route path="/rentalBike" element={<RentalBike />} />
+              <Route path="/rentalBike" element={<RentalBikeUI />} />
               <Route path="/paymentInqury" element={<InquryPay />} />
               <Route path="/statistics" element={<InquryStaticsBike/>}/>
               <Route path="/announcement" element={<Announcement />} />
