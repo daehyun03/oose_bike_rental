@@ -1,7 +1,11 @@
-
 .contents{
-    display: flex;
-    align-items: center;  
-    justify-content: space-around;
+    width: 100%;
+    height: auto;
+    margin-top: 10%;
+    background-color: #d8ee9c; 
+    color: #7ac142;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30%;
 }
-
