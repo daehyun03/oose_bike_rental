@@ -1,0 +1,25 @@
+.table_container{
+    margin: 0 auto;
+    padding: 0;
+    width: 100%;
+}
+.useage_table {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    border: black solid 2px;
+    border-collapse: collapse;
+    margin: 30px auto 0;
+}
+.useage_table thead {
+    background-color: #7AC142FF;
+}
+.useage_table thead tr th {
+    border: black solid 2px;
+    padding: 10px;
+    color: white;
+}
+.useage_table tbody tr td {
+    border: #cccccc solid 1px;
+    padding: 10px;
+}
