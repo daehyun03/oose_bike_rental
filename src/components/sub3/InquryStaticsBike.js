@@ -1,7 +1,6 @@
 import "./InquryStaticsBike.css";
 import { useEffect, useState } from "react"
 
-
     const InquryStaticsBike = () => {
         const [stast, setStast] = useState({bike: ""});
     
@@ -28,12 +27,11 @@ import { useEffect, useState } from "react"
             };
     
             fetchUser();
-        }, []); // Removed 'userData' from the dependency array
+        }, []); 
     
     
         const handleRead = (e) => {
             e.preventDefault();
-            // TODO 읽기 처리 로직
         };
 
     return(
@@ -41,7 +39,7 @@ import { useEffect, useState } from "react"
             <h2>자전거 통계 조회</h2>
             <form className="contents">
                 {stast && (
-                    <div className="bicycle_id">{stast.bike}</div>
+                    <div className="bicycle_id">자전거 통계 내용{stast.bike}</div>
                 )} 
             </form>
         </div>

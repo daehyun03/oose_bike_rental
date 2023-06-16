@@ -38,7 +38,6 @@ const InquryPay = () => {
         e.preventDefault();
     };
 
-  
     return(
         <div className="container">
             <h2>결제 내역 조회</h2> 
