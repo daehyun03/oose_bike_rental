@@ -20,6 +20,7 @@ router.post("/rentalBike", (req, res) => {
     );
 });
 
+
 router.get("/usesageInqury", (req, res) => {
     conn.query(
         "SELECT * FROM useage",

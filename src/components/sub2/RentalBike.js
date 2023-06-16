@@ -1,11 +1,10 @@
 import "./RentalsBike.css"
 
-
 export default function () {
     
     const [data, setData] = useState([])
     useEffect(()=>{
-        useageInq();
+        useageInq(); 
     }, [] )
     const useageInq = async () => {
         const response = await axios.get("http://127.0.0.1:3001/sub2Control/rentalBike")

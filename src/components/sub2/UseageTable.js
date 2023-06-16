@@ -9,6 +9,7 @@ function UseageTable({ data }) {
     navigate(`/useage/${id}`, { state: info });
   }
 
+  
   const columns = ["자전거 번호", "위치", "날짜"];
 
   return (

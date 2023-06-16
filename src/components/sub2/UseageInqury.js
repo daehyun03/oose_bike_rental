@@ -3,7 +3,6 @@ import UseageTable from "./UseageTable"
 import "./UseageInqury.css"
 import axios from "axios"
 
-
 export default function UseageInqury() {
     const [data, setData] = useState([])
 

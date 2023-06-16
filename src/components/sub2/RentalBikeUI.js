@@ -1,7 +1,6 @@
 import "./RentalBikeUI.css"
 import {Link} from "react-router-dom";
 
-
 function RentalBikeUI() {
     return (
         <div className="container">
@@ -12,5 +11,6 @@ function RentalBikeUI() {
         </div>
     );
 }
+
 
 export default RentalBikeUI;
