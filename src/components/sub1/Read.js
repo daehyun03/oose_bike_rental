@@ -43,9 +43,9 @@ const Read = () => {
                     <form className="wrapper-box" role="form">
                         {userData && (
                             <>
-                                <div className="form-control form-control-read">ID: {userData.id}</div>
+                                <div className="form-control form-control-read">ID: {userData.id.replace(/^.|.$/g, "#")}</div>
                                 <div className="form-control form-control-read">Name: {userData.name}</div>
-                                <div className="form-control form-control-read">Phone: {userData.phone}</div>
+                                <div className="form-control form-control-read">Phone: {userData.phone.substring(0,4) + "##" + userData.phone.substring(6,9) + "##" + userData.phone.substring(11,)}</div>
                                 <div className="form-control form-control-read">E-mail: {userData.mail}</div>
                             </>
                         )}

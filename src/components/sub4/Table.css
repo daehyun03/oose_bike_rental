@@ -3,7 +3,7 @@
     padding: 0;
     width: 100%;
 }
-.announce_table {
+.useage_table {
     padding: 0;
     width: 100%;
     text-align: center;
@@ -11,15 +11,15 @@
     border-collapse: collapse;
     margin: 30px auto 0;
 }
-.announce_table thead {
+.useage_table thead {
     background-color: #7AC142FF;
 }
-.announce_table thead tr th {
+.useage_table thead tr th {
     border: black solid 2px;
     padding: 10px;
     color: white;
 }
-.announce_table tbody tr td {
+.useage_table tbody tr td {
     border: #cccccc solid 1px;
     padding: 10px;
 }

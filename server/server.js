@@ -5,7 +5,6 @@ const bodyParser = require("body-parser");
 const app = express();
 const port = 3001;
 
-
 const sub1Router = require('./sub1Control')
 const sub2Router = require('./sub2Control')
 const sub3Router = require('./sub3Control')
@@ -17,6 +16,7 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.use('/sub1Control', sub1Router);
+app.use('/sub2Control', sub2Router);
 app.use('/sub3Control', sub3Router);
 app.use('/sub4Control', sub4Router)
 app.use('/sub5Control', sub5Router);
