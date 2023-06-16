@@ -14,7 +14,7 @@ router.post("/insertBicycle", (req, res) => {
                 console.error("Error inserting data: ", error);
                 res.status(500).send("Error inserting data");
             } else {
-                res.send()
+                res.send(results)
             }
         }
     );
@@ -35,10 +35,36 @@ router.post("/insertRentalOffice", (req, res) => {
                 console.error("Error inserting data: ", error);
                 res.status(500).send("Error inserting data");
             } else {
-                res.send()
+                res.send(results)
             }
         }
     );
 });
 
+//중복 체크용
+router.get("/insertBicycle", (req, res) => {
+    connection.query(
+        "SELECT bicycleNum FROM rental_bike",
+        (error, results) => {
+            if(error) {
+                console.log(error)
+            } else {
+                res.send({datas: results})
+            }
+        }
+    )
+})
+//중복 체크용
+router.get("/insertRentalOffice", (req, res) => {
+    connection.query(
+        "SELECT ren_id FROM rental_office",
+        (error, results) => {
+            if(error) {
+                console.log(error)
+            } else {
+                res.send({datas: results})
+            }
+        }
+    )
+})
 module.exports = router;

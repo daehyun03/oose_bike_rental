@@ -1,7 +1,8 @@
 import React from 'react';
 import {Link } from 'react-router-dom';
-import '../test.css';
+
 import '../Sub5.css';
+import '../../../index.css';
 
 function BicyclePage(){
     return(
