@@ -30,7 +30,6 @@ const InquryPay = () => {
                 console.error(error);
             }
         };
-
         fetchUser();
     }, []); 
 

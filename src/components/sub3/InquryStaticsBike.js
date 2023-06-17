@@ -25,7 +25,6 @@ import { useEffect, useState } from "react"
                     console.error(error);
                 }
             };
-    
             fetchUser();
         }, []); 
     
