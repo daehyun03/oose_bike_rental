@@ -1,4 +1,4 @@
-const conn = require("./dbConn");
+const conn = require("./server/server");
 const express = require('express');
 const router = express.Router();
 
