@@ -11,7 +11,7 @@ function Table({data}) {
     return(
         <div className="table_container">
             <table className="announce_table">
-                <thead>
+                <thead> 
                     <tr>
                         {colums.map((colum) => (
                             <th>{colum}</th>

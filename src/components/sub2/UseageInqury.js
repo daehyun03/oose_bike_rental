@@ -1,21 +1,27 @@
-import Table from "./../sub4/Table"
-import "./useageInqury.css"
-
+import { useEffect, useState } from "react"
+import UseageTable from "./UseageTable"
+import "./UseageInqury.css"
+import axios from "axios"
 
 export default function UseageInqury() {
-    const dummy = [
-        {No: 1, Title: "대여1"},
-        {No: 2, Title: "대여2"},
-        {No: 3, Title: "대여3"},
-        {No: 4, Title: "대여4"}
-    ]
+    const [data, setData] = useState([])
+
+    useEffect(()=>{
+        useageInq();
+    }, [] )
+    
+    const useageInq = async () => {
+        const response = await axios.get("http://127.0.0.1:3001/sub2Control/usesageInqury")
+        setData(response.data)
+    }
+
 
     return(
         <div className="container">
             <h2>이용 내역 조회</h2>
-            <Table data={dummy}></Table>
+            <UseageTable data={data}></UseageTable>
             <div className="button_container">
             </div>
         </div>
     )
-}
+} 
