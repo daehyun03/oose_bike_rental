@@ -2,11 +2,12 @@ const conn = require("./dbConn");
 const express = require('express');
 const router = express.Router();
 
-router.post("/inquryPay", (req, res) => {
+
+router.post("/paymentInqury", (req, res) => {
     console.log(req.body);
 
     conn.query(
-        "SELETE * FROM payment WHERE userID = userId",
+        "SELECT paymentHistory FROM history",
         (error, results, fields) => {
             if (error) {
                 console.error("Error inserting data: ", error);
@@ -18,11 +19,11 @@ router.post("/inquryPay", (req, res) => {
     );
 });
 
-router.post("/inquryStatics", (req, res) => {
+router.post("/statistics", (req, res) => {
     console.log(req.body);
 
     conn.query(
-        "SELECT bikestast FROM statistic",
+        "SELECT bikeStast FROM statistics",
         (error, results, fields) => {
             if (error) {
                 console.error("Error retrieving user data: ", error);
