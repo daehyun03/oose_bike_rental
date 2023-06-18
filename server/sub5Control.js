@@ -43,7 +43,7 @@ router.post("/insertRentalOffice", (req, res) => {
 
 //중복 체크용
 router.get("/insertBicycle", (req, res) => {
-    connection.query(
+    conn.query(
         "SELECT bicycleNum FROM rental_bike",
         (error, results) => {
             if(error) {
@@ -56,7 +56,7 @@ router.get("/insertBicycle", (req, res) => {
 })
 //중복 체크용
 router.get("/insertRentalOffice", (req, res) => {
-    connection.query(
+    conn.query(
         "SELECT ren_id FROM rental_office",
         (error, results) => {
             if(error) {
