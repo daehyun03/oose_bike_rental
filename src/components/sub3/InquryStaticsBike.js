@@ -1,14 +1,13 @@
-import { patch } from "../sub3Control";
-
 import "./InquryStaticsBike.css";
 import { useEffect, useState, useCallback } from "react"
 
 function InquryStaticsBike () {
-    const [stast, setStast] = useState([
-        idx = "",
-        state = "",
-        locate = ""
-    ]);
+    const [stast, setStast] = useState({
+
+        idx : "",
+        state : "",
+        locate : ""
+    });
 
     useEffect(() => {
         const res =

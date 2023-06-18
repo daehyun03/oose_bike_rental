@@ -1,4 +1,3 @@
-import { patch } from "../sub3Control";
 import "./InquryPay.css"
 import { useEffect, useState, useCallback } from "react"
 
