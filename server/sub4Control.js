@@ -7,7 +7,7 @@ const logger = winston.createLogger()
 
 router.get("/announceInqury", (req, res) => {
     connection.query(
-        "SELECT * FROM announcement",
+        "SELECT * FROM announcement ORDER BY idx DESC",
         (error, results) => {
             if(error) {
                 console.log(error)
